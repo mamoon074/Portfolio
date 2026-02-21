@@ -13,7 +13,11 @@ export default function Contact() {
         const formData = new FormData(event.target);
 
         // Web3Forms Access Key - You need to replace this string with your own key from https://web3forms.com/
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formData.append("access_key", "eac37e50-9544-406a-a521-80b208c1ca5e");
+
+        // Customizing the Email UI to be more professional
+        formData.append("subject", "🚀 New Message from Your Portfolio!");
+        formData.append("from_name", "Portfolio Contact Form");
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
